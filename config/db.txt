@@ -1,0 +1,5 @@
+host:sbjonline.ddns.net
+port:5000
+user:root
+password:sbj41310962
+database:tlb_debugger

@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.2">
+  <object class="tk.Toplevel" id="main_toplevel">
+    <property name="background">#d9d9d9</property>
+    <property name="container">false</property>
+    <property name="height">760</property>
+    <property name="resizable">none</property>
+    <property name="title" translatable="yes">TLB Checker v0.1</property>
+    <property name="width">1000</property>
+    <containerlayout manager="grid">
+      <property name="anchor">nw</property>
+      <property name="propagate">False</property>
+    </containerlayout>
+    <child>
+      <object class="ttk.Frame" id="setup_frame">
+        <property name="height">200</property>
+        <property name="width">200</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="padx">10</property>
+          <property name="pady">10</property>
+          <property name="row">0</property>
+          <property name="sticky">new</property>
+        </layout>
+        <child>
+          <object class="ttk.Label" id="pclink_port_label">
+            <property name="font">TkDefaultFont</property>
+            <property name="justify">right</property>
+            <property name="text" translatable="yes">PC link Port</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="row">0</property>
+              <property name="sticky">e</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="internal_port_link_label">
+            <property name="justify">right</property>
+            <property name="text" translatable="yes">Internal Link Port</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="pady">10</property>
+              <property name="row">1</property>
+              <property name="sticky">e</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Combobox" id="pclink_combobox">
+            <property name="width">7</property>
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="padx">10</property>
+              <property name="row">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Combobox" id="internal_link_combobox">
+            <property name="width">7</property>
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="link_button">
+            <property name="command" type="command" cbtype="simple">link_button_pressed</property>
+            <property name="text" translatable="yes">Link</property>
+            <property name="width">15</property>
+            <layout manager="grid">
+              <property name="column">2</property>
+              <property name="row">0</property>
+              <property name="rowspan">2</property>
+              <property name="sticky">ns</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Frame" id="display_frame">
+        <property name="height">200</property>
+        <property name="width">200</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="padx">10p</property>
+          <property name="row">1</property>
+          <property name="sticky">sew</property>
+        </layout>
+        <child>
+          <object class="ttk.Label" id="status_label">
+            <property name="text" translatable="yes">Status</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="row">0</property>
+              <property name="sticky">w</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Text" id="status_text">
+            <property name="height">5</property>
+            <property name="width">50</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="columnspan">5</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="message_label">
+            <property name="text" translatable="yes">Message</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="row">2</property>
+              <property name="sticky">w</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Text" id="text2">
+            <property name="height">10</property>
+            <property name="width">50</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="columnspan">5</property>
+              <property name="row">3</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
